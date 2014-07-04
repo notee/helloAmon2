@@ -14,6 +14,11 @@ any '/' => sub {
     });
 };
 
+get '/hello' => sub {
+    my ($c) = @_;
+    return $c->render( 'index.tx', { counter => 0 } );
+}
+
 post '/reset_counter' => sub {
     my $c = shift;
     $c->session->remove('counter');
