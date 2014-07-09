@@ -3,6 +3,7 @@ Makefile
 MANIFEST
 *.bak
 *.old
+*.un~
 nytprof.out
 nytprof/
 *.db

@@ -19,6 +19,12 @@ get '/hello' => sub {
     return $c->render( 'index.tx', { counter => 0 } );
 }
 
+post '/name_returner' => sub {
+    my ($c) = @_;
+    my $name = $c->req->param('name');
+    return $c->render( 'index.tx', { name => $name } );
+}
+
 post '/reset_counter' => sub {
     my $c = shift;
     $c->session->remove('counter');

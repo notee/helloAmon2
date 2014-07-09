@@ -89,6 +89,18 @@
 
 -->
 
+<h1>form test</h1>
+<h2>フォーム入力内容の入出力だけやるよ！</h2>
+<br>
+<p>なまえをにゅうりょくしてね！</p>
+<form method="post" action="/name_returner">
+    <input type="text" name="name">
+    <input type="submit" name="submit" value="そーしん">
+</form>
+:if defined $name {
+    Hello, $name! <br>
+:}
+
 <h2>Session counter demo</h2>
 
 <p>You seen this page <: $counter :> times.</p>
@@ -96,6 +108,6 @@
 <form method="post" action="/reset_counter">
     <input type="submit" name="Reset counter." class="btn btn-default">
 </form>
-     
+
 
 : }
