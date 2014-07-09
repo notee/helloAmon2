@@ -98,7 +98,7 @@
     <input type="submit" name="submit" value="そーしん">
 </form>
 :if defined $name {
-    Hello, $name! <br>
+    Hello, <: $name :>! <br>
 :}
 
 <h2>Session counter demo</h2>
