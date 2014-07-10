@@ -101,6 +101,34 @@
     Hello, <: $name :>! <br>
 :}
 
+<h1>DB test</h1>
+<h2>DBへの登録と参照をやるよ！</h2>
+<br>
+<h3>とうろくするやつ</h3>
+<p>IDとなまえをにゅうりょくしてね！</p>
+<form method="post" action="/db_insert">
+    ID <input type="text" name="id"><br>
+    なまえ <input type="text" name="name"><br>
+    <input type="submit" name="submit" value="そーしん">
+</form>
+
+<h3>さんしょうするやつ</h3>
+<p>IDをにゅうりょくしてね！</p>
+<form method="post" action="/db_select>
+    ID <input type="text" name="id"><br>
+    <input type="submit" name="submit" value="いでよ！">
+</form>
+
+:if $is_select_done {
+    <: $id :> : <br>
+    :if defined $name {
+        Hello, <: $name :>! <br>
+    :}
+    :else {
+        No user found...<br>
+    :}
+:}
+
 <h2>Session counter demo</h2>
 
 <p>You seen this page <: $counter :> times.</p>

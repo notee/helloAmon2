@@ -8,4 +8,18 @@ __PACKAGE__->load_plugin('Count');
 __PACKAGE__->load_plugin('Replace');
 __PACKAGE__->load_plugin('Pager');
 
+sub insert_member {
+    my ($self, $record) = @_;
+    $self->insert('member', { id => $record->{id}, name => $record->{name} });
+}
+
+sub select_member{
+    my ($self, $id) = @_;
+    my $row = $self->search(
+        'member',
+        +{ id => $id },
+    );
+    return $row->get_column('name') if $row;
+}
+
 1;
