@@ -6,12 +6,5 @@ my $dbpath = File::Spec->catfile($basedir, 'db', 'development.db');
     'DBI' => [
         'dbi:mysql:amon2_test', 'root', '',
         +{ mysql_enable_utf8 => 1 },
-
-=pod
-        "dbi:SQLite:dbname=$dbpath", '', '',
-        +{
-            sqlite_unicode => 1,
-        }
-=cut
     ],
 };
