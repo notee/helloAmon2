@@ -114,7 +114,7 @@
 
 <h3>さんしょうするやつ</h3>
 <p>IDをにゅうりょくしてね！</p>
-<form method="post" action="/db_select>
+<form method="post" action="/db_select">
     ID <input type="text" name="id"><br>
     <input type="submit" name="submit" value="いでよ！">
 </form>
