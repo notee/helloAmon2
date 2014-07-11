@@ -15,11 +15,11 @@ sub insert_member {
 
 sub select_member{
     my ($self, $id) = @_;
-    my $row = $self->search(
+    my $row = $self->single(
         'member',
         +{ id => $id },
     );
-    return $row->get_column('name') if $row;
+    return $row->{name} if $row;
 }
 
 1;
