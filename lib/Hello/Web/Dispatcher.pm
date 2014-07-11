@@ -29,14 +29,14 @@ post '/db_insert' => sub {
     my ($c) = @_;
     my $id = $c->req->param('id');
     my $name = $c->req->param('name');
-    $c->db->db_insert(+{ id => $id, name => $name });
+    $c->db->insert_member(+{ id => $id, name => $name });
     return $c->render( 'index.tx' );
 };
 
 post '/db_select' => sub {
     my ($c) = @_;
     my $id = $c->req->param('id');
-    my $name = $c->db->db_select($id);
+    my $name = $c->db->select_member($id);
     return $c->render( 'index.tx', { name => $name, is_select_done => 1 } );
 };
 
