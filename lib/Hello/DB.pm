@@ -19,7 +19,7 @@ sub select_member{
         'member',
         +{ id => $id },
     );
-    return $row->{name} if $row;
+    return $row->name if $row;
 }
 
 1;
