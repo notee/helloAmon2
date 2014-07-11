@@ -37,7 +37,7 @@ post '/db_select' => sub {
     my ($c) = @_;
     my $id = $c->req->param('id');
     my $name = $c->db->select_member($id);
-    return $c->render( 'index.tx', { name => $name, is_select_done => 1 } );
+    return $c->render( 'index.tx', { id => $id, name => $name, is_select_done => 1 } );
 };
 
 post '/reset_counter' => sub {
